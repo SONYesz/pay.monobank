@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор квитка — monobank</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 20px;
+      background: #f2f2f4;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh;
+    }
+    .form-card {
+      background: #fff;
+      padding: 24px;
+      border-radius: 20px;
+      width: 100%; max-width: 400px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    h2 { margin-top: 0; color: #14141a; font-size: 20px; text-align: center; }
+    .form-group { margin-bottom: 16px; }
+    label { display: block; font-size: 14px; color: #6b6b75; margin-bottom: 6px; font-weight: 500; }
+    select, input {
+      width: 100%; padding: 12px;
+      border: 1px solid #e2e2e6; border-radius: 12px;
+      font-size: 15px; outline: none; background: #fafafa;
+    }
+    select:focus, input:focus { border-color: #fa5788; background: #fff; }
+    button {
+      width: 100%; padding: 14px;
+      border: none; border-radius: 14px;
+      background: linear-gradient(135deg, #c370ea 0%, #fa5788 50%, #ee436b 100%);
+      color: #fff; font-size: 16px; font-weight: 700;
+      cursor: pointer; margin-top: 10px;
+      box-shadow: 0 4px 14px rgba(240, 80, 120, 0.35);
+    }
+    button:active { opacity: 0.9; }
+  </style>
+</head>
+<body>
+
+  <div class="form-card">
+    <h2>Створення квитка</h2>
+    <form action="ticket.html" method="GET">
+      
+      <div class="form-group">
+        <label for="type">Транспорт</label>
+        <select name="type" id="type">
+          <option value="Тролейбус">Тролейбус</option>
+          <option value="Автобус">Автобус</option>
+          <option value="Трамвай">Трамвай</option>
+          <option value="Маршрутка">Маршрутка</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="num">Номер транспорту (наприклад: 046)</label>
+        <input type="text" id="num" name="num" value="046" required>
+      </div>
+
+      <div class="form-group">
+        <label for="count">Кількість квитків</label>
+        <input type="number" id="count" name="count" value="1" min="1" max="10" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ticketNum">Номер квитка (наприклад: 140 331)</label>
+        <input type="text" id="ticketNum" name="ticketNum" value="140 331" required>
+      </div>
+
+      <button type="submit">Згенерувати квиток</button>
+    </form>
+  </div>
+
+</body>
+</html>
