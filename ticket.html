@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Квиток — monobank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="phone">
+
+    <!-- Кнопка (i) в самом верхнем правом углу -->
+    <a href="index.html" class="info-btn" aria-label="Інформація">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6b6b75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+    </a>
+
+    <div class="content">
+      <div class="ticket-layout--logo-wrapper">
+        <div class="ticket-layout--merchant-logo">
+          <img src="маленький кьюар сверху.png" alt="Monobank Cat Icon">
+        </div>
+      </div>
+
+      <div class="ticket-card">
+        <div class="banner">
+          <div class="banner-track">
+            <span>Найголовніше — залишайтеся людьми і кричіть, що ви живі. Я живий! &nbsp;◆&nbsp; Життя — цікаве, і мотивація то є сильна: філософія, психологія.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Найголовніше — залишайтеся людьми і кричіть, що ви живі. Я живий! &nbsp;◆&nbsp; Життя — цікаве, і мотивація то є сильна: філософія, психологія.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          </div>
+        </div>
+
+        <div class="ticket-title" id="vehicleTitle">Тролейбус</div>
+        <div class="hr-short"></div>
+
+        <div class="purchased" id="purchasedText">Придбано 31 серпня о 17:20</div>
+        <div class="ticket-count" id="ticketCount">1 квиток</div>
+
+        <div class="status-pill">
+          <span class="dot"></span>
+          <span id="countdown">Квиток дійсний — 59:50</span>
+        </div>
+
+        <div class="vehicle-line" id="vehicleLine">Тролейбус <b>№ 046</b></div>
+
+        <div class="perforation"><div class="dashes"></div></div>
+
+        <div class="qr-wrap">
+          <div class="qr-box">
+            <img src="большой снизу.png" alt="QR Code" class="qr-img">
+          </div>
+        </div>
+
+        <div class="ticket-number" id="ticketNumberBlock">Номер: <b>140 331</b></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="ticket.js"></script>
+</body>
+</html>
